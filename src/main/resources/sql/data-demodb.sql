@@ -1,0 +1,1 @@
+insert into persons (firstname, lastname) values ('Edgar', 'Lora')
