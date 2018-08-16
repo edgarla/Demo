@@ -1,20 +1,20 @@
 create table if not exists persons (
-  personid bigint not null auto_increment,
-  firstname text not null,
-  lastname text not null,
-  primary key (personid)
+  personId bigint not null auto_increment,
+  firstName text not null,
+  lastName text not null,
+  primary key (personId)
 );
 
 create table if not exists skills (
-  skillid bigint not null auto_increment,
-  skillname text not null,
-  primary key (skillid)
+  skillId bigint not null auto_increment,
+  skillName text not null,
+  primary key (skillId)
 );
 
 create table if not exist personskills (
-  personid bigint not null,
-  skillid bigint not null,
-  primary key (personid, skillid),
-  foreign key (personid) references persons(personid),
-  foreign key (skillid) references skills(skillid)
+  personId bigint not null,
+  skillId bigint not null,
+  primary key (personId, skillId),
+  foreign key (personId) references persons(personId),
+  foreign key (skillId) references skills(skillId)
 );
